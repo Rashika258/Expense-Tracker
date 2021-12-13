@@ -9,9 +9,13 @@ import useStyles from './styles';
 
 const App = () => {
   const classes = useStyles();
+  // custom hook that consumes the state preserved in SpeechProvider
   const { speechState } = useSpeechContext();
+
+  // returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
   const main = useRef(null)
 
+  // scrollIntoView() method scrolls the specified element into the visible area of the browser window.
   const executeScroll = () => main.current.scrollIntoView()    
 
   useEffect(() => {
@@ -22,7 +26,7 @@ const App = () => {
 
   return (
     <div>
-      <Grid className={classes.grid} container spacing={0} alignItems="center" justify="center" style={{ height: '100vh'}}>
+      <Grid className={classes.grid} container spacing={0} alignItems="center" justifyContent="center" style={{ height: '100vh'}}>
         <Grid item xs={12} sm={4} className={classes.mobile}>
           <Details title="Income" />
         </Grid>
