@@ -86,6 +86,10 @@ export const Provider = ({ children }) => {
   // this will create the children properties or state
   console.log(children);
 
+  // Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method.
+
+  // useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. useReducer also lets you optimize performance for components that trigger deep updates because you can pass dispatch down instead of callbacks.
+
   // to attach a function along with handling the state or when we want to handle the state based on the previous values.
   const [transactions, dispatch] = useReducer(contextReducer, initialState);
 

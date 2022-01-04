@@ -39,6 +39,11 @@ const initialState = {
 const NewTransactionForm = () => {
   const classes = useStyles();
   const { addTransaction } = useContext(ExpenseTrackerContext);
+  // Returns a stateful value, and a function to update it.
+
+  // During the initial render, the returned state (state) is the same as the value passed as the first argument (initialState).
+
+  // The setState function is used to update the state. It accepts a new state value and enqueues a re-render of the component.
   const [formData, setFormData] = useState(initialState);
   const { segment } = useSpeechContext();
   const [open, setOpen] = React.useState(false);
@@ -46,7 +51,7 @@ const NewTransactionForm = () => {
   const createTransaction = () => {
     if (Number.isNaN(Number(formData.amount)) || !formData.date.includes("-"))
       return;
-
+    // Spread syntax (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected, or an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.
     if (incomeCategories.map((iC) => iC.type).includes(formData.category)) {
       setFormData({ ...formData, type: "Income" });
     } else if (
@@ -118,6 +123,7 @@ const NewTransactionForm = () => {
         createTransaction();
       }
     }
+    // ESLint is a static code analysis tool for identifying problematic patterns found in JavaScript code. It was created by Nicholas C. Zakas in 2013.[1][2] Rules in ESLint are configurable, and customized rules can be defined and loaded. ESLint covers both code quality and coding style issues. ESLint supports current standards of ECMAScript, and experimental syntax from drafts for future standards. Code using JSX or TypeScript can also be processed when a plugin or transpiler is used
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [segment]);
 
