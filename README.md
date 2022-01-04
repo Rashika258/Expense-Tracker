@@ -15,6 +15,7 @@ https://www.youtube.com/watch?v=sP7ANcTpJr8
 ## Speechly Config
 
 
+  category_income = [
     Business
     Investments
     Extra income
