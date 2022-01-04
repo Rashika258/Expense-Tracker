@@ -11,11 +11,17 @@ const DetailsCard = ({ title, subheader }) => {
 
   return (
     <Card className={title === 'Income' ? classes.income : classes.expense}>
-      <CardHeader style={{fontFamily:"Handlee"}} title={title} subheader={subheader} />
+
+      <CardHeader className={classes.title} title={title} subheader={subheader} />
+
       <CardContent>
+
         <Typography style={{fontFamily:'Source Sans 3'}}  variant="h5">${total}</Typography>
+
         <Doughnut data={chartData} />
+
       </CardContent>
+      
     </Card>
   );
 };

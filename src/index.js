@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { SpeechProvider } from '@speechly/react-client';
+import React from "react";
+import ReactDOM from "react-dom";
+import { SpeechProvider } from "@speechly/react-client";
 
-import { Provider } from './context/context';
-import App from './App';
-import './index.css';
+import { Provider } from "./context/context";
+import App from "./App";
+import "./index.css";
 
 ReactDOM.render(
   // The client exposes a context provider and a hook that allows you to consume that context.
@@ -13,5 +13,5 @@ ReactDOM.render(
       <App />
     </Provider>
   </SpeechProvider>,
-  document.getElementById('root'),
+  document.getElementById("root")
 );
