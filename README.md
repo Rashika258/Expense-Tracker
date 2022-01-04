@@ -14,7 +14,7 @@ https://www.youtube.com/watch?v=sP7ANcTpJr8
 
 ## Speechly Config
 
-
+#### https://gist.github.com/adrianhajdin/aa28f5c4928d05fe55aae37d83dc98d2
   category_income = [
     Business
     Investments
